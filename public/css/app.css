@@ -7,6 +7,20 @@
   background-color: rgba(255, 255, 255, 0.875);
 }
 
+.font-AmaticSC {
+  font-family: AmaticSC;
+}
+
+@font-face {
+  src: url("../fonts/AmaticSC-Regular.ttf");
+  font-family: AmaticSC;
+  font-weight: 400;
+}
+@font-face {
+  src: url("../fonts/AmaticSC-Bold.ttf");
+  font-family: AmaticSC;
+  font-weight: 700;
+}
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
