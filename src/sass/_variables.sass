@@ -1,0 +1,21 @@
+@import ../../node_modules/bootstrap/scss/functions
+@import ../../node_modules/bootstrap/scss/variables
+
+$grey: #eee
+$red: #ce1212
+
+$custom-colors: ("-red": $red, "-grey": $grey)
+$theme-colors: map-merge($custom-colors, $theme-colors)
+
+$spacer: .25rem
+$spacers: (0: 0)
+@for $i from 1 through 20
+    $spacers: map-merge($spacers, ($i: $i * $spacer))
+
+$position-values: ( 0: 0, 25: 25%, 50: 50%, 100: 100% )
+
+.w-87\.5
+    width: 87.5%
+
+.bg--light
+    background-color: rgba(255, 255, 255, .875)

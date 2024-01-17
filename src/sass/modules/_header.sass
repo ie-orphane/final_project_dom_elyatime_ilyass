@@ -1,0 +1,33 @@
+header
+    nav
+        a
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                top: 112.5%
+                left: 0
+                width: 0
+                height: 1.75px
+                border-radius: 2.5%
+                background: $red
+                transition: width .25s linear
+
+            &.active, &:hover
+                opacity: 100% !important
+
+                &::after
+                    width: 100% !important
+
+@media (max-width: 430px)
+    header
+        nav
+            transition: left .5s linear
+            width: 100vw
+            height: 100vh
+            position: fixed
+            left: 0
+            top: 64.5px
+            
+            &.closed
+                left: 100%
