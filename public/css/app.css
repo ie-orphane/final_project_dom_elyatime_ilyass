@@ -7,10 +7,26 @@
   background-color: rgba(255, 255, 255, 0.875);
 }
 
-.font-AmaticSC {
-  font-family: AmaticSC;
+.w--100 {
+  width: 100%;
 }
 
+.w-62\.5 {
+  width: 62.5%;
+}
+
+.fs-0 {
+  font-size: calc(1.75rem + 1.5vw);
+}
+
+@media (min-width: 1024px) {
+  .w-lg-37\.5 {
+    width: 37.5%;
+  }
+  .w-lg-75 {
+    width: 75% !important;
+  }
+}
 @font-face {
   src: url("../fonts/AmaticSC-Regular.ttf");
   font-family: AmaticSC;
@@ -21,6 +37,22 @@
   font-family: AmaticSC;
   font-weight: 700;
 }
+@font-face {
+  src: url("../fonts/Inter-Variable.ttf");
+  font-family: Inter;
+}
+.font-default {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.font-primary {
+  font-family: Inter, sans-serif;
+}
+
+.font-secondary {
+  font-family: AmaticSC, sans-serif;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -18050,24 +18082,126 @@ header nav a::after {
   background: #ce1212;
   transition: width 0.25s linear;
 }
-header nav a.active, header nav a:hover {
+header nav a.active {
   opacity: 100% !important;
 }
-header nav a.active::after, header nav a:hover::after {
+header nav a.active::after {
   width: 100% !important;
 }
 
 @media (max-width: 430px) {
   header nav {
-    transition: left 0.5s linear;
+    transition-property: left, background;
+    transition: 0.5s linear;
     width: 100vw;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 64.5px;
+    padding: 1.75rem;
   }
   header nav.closed {
     left: 100%;
+  }
+}
+.myModal {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.625);
+  padding-top: 4rem;
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  transition-property: padding, background;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 1.75s;
+}
+.myModal .myModal-inner {
+  width: 45vw;
+  height: fit-content;
+  background-color: white;
+  border-radius: 0.375rem;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.875);
+}
+.myModal .myModal-inner .myModal-header {
+  font-family: AmaticSC;
+  display: flex;
+  align-items: center;
+  color: #ce1212;
+}
+.myModal .myModal-inner .myModal-header * {
+  padding: 0.75rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: default;
+}
+.myModal .myModal-inner .myModal-header *:not(.active) {
+  cursor: pointer;
+}
+.myModal .myModal-inner .myModal-header .active {
+  background: rgba(206, 18, 18, 0.875);
+  color: white;
+}
+.myModal .myModal-inner .myModal-body {
+  padding: 2rem 1.75rem;
+}
+.myModal .myModal-inner .myModal-body label {
+  opacity: 75%;
+}
+.myModal .myModal-inner .myModal-body input {
+  background: #fff;
+  outline: none;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+}
+.myModal .myModal-inner .myModal-body input::placeholder {
+  opacity: 50%;
+}
+.myModal .myModal-inner .myModal-body button {
+  border: none;
+  background-color: #ce1212;
+  width: fit-content;
+  align-self: center;
+  color: white;
+  padding: 0.75rem 0;
+  width: 75%;
+  border-radius: 0.75rem;
+  border: 2px solid #ce1212;
+  font-family: Inter, sans-serif;
+  font-weight: bold;
+  transition-property: color, background;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 400ms;
+}
+.myModal .myModal-inner .myModal-body button:hover {
+  background: transparent;
+  color: #ce1212;
+}
+.myModal .myModal-inner .myModal-body label[for=login-password] {
+  position: relative;
+}
+.myModal .myModal-inner .myModal-body label[for=login-password]::after {
+  content: "forget password ?";
+  color: #ce1212;
+  position: absolute;
+  right: 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.myModal .myModal-inner .myModal-body input[type=number]::-webkit-inner-spin-button,
+.myModal .myModal-inner .myModal-body input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 430px) {
+  .myModal-inner {
+    width: 75vw !important;
   }
 }
 

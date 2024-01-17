@@ -8,7 +8,7 @@
     <title>LionsResto</title>
 </head>
 
-<body>
+<body class="font-default">
     <header class="m-auto w-87.5 d-flex py-4 justify-content-between">
         <a class="text-decoration-none text-black fs-4 fw-bold" href="">Lions Resto<span class="text--red">.</span></a>
         <nav class="m-auto closed">
@@ -24,6 +24,52 @@
         </nav>
 
         <div class="d-flex gap-2 align-items-center">
+            <button type="button" data-toggle="myModal" data-target="register-modal"
+                class="border-0 bg--red text-white rounded-5 px-6 py-1">Register</button>
+
+            <section id="register-modal" class="myModal">
+                <div class="myModal-inner">
+                    <div class="myModal-header">
+                        <div class="register-toggle w-100 d-flex justify-content-center">Sign up</div>
+                        <div class="register-toggle w-100 d-flex justify-content-center active">Log in</div>
+                    </div>
+
+                    <div class="myModal-body">
+                        <form id="signup-form" class="register-form d-none flex-column gap-4">
+                            <div class="d-flex flex-column gap-1">
+                                <label for="signup-name">Full Name</label>
+                                <input id="signup-name" placeholder="Mohammed Ait" type="text">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="signup-phone">Phone Number</label>
+                                <input id="signup-phone" placeholder="+212 XXX XXX-XXX" type="number">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="signup-email">Email</label>
+                                <input id="signup-email" placeholder="email@example.com" type="email">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="signup-password">Password</label>
+                                <input id="signup-password" placeholder="*****" type="password">
+                            </div>
+                            <button>Sign Up</button>
+                        </form>
+
+                        <form id="login-form" class="register-form d-flex flex-column gap-4">
+                            <div class="d-flex flex-column gap-1">
+                                <label for="login-email">Email</label>
+                                <input id="login-email" placeholder="email@example.com" type="email">
+                            </div>
+                            <div class="d-flex flex-column gap-1">
+                                <label for="login-password">Password</label>
+                                <input id="login-password" placeholder="*****" type="password">
+                            </div>
+                            <button>Log In</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
             <i id="navbar-open" class="d-lg-none">
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" fill="#37373f" viewBox="0 0 448 512">
                     <path
@@ -42,14 +88,14 @@
     <main>
         <!--& hero section : start -->
         <section class="bg--grey py-8">
-            <div class="m-auto w-87.5 d-flex align-items-center justify-content-between">
-                <div>
-                    <h1 class="font-AmaticSC fw-bold">enjoy your healthy belicious food</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim repudiandae fuga.</p>
+            <div class="m-auto w-87.5 d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between gap-lg-0 gap-10">
+                <div class="w-lg-37.5 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+                    <h1 class="font-secondary fw-bold w-62.5 fs-0">enjoy your healthy belicious food</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A enim repudiandae fuga. consectetur adipisicing</p>
                 </div>
 
-                <div>
-                    <img class="w-75" src="./public/images/hero-img.png" alt="hero image">
+                <div class="d-flex justify-content-lg-end">
+                    <img class="w--100 w-lg-75" src="./public/images/hero-img.png" alt="hero image">
                 </div>
             </div>
         </section>
