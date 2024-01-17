@@ -1,32 +1,4 @@
 @charset "UTF-8";
-.w-87\.5 {
-  width: 87.5%;
-}
-
-.bg--light {
-  background-color: rgba(255, 255, 255, 0.875);
-}
-
-.w--100 {
-  width: 100%;
-}
-
-.w-62\.5 {
-  width: 62.5%;
-}
-
-.fs-0 {
-  font-size: calc(1.75rem + 1.5vw);
-}
-
-@media (min-width: 1024px) {
-  .w-lg-37\.5 {
-    width: 37.5%;
-  }
-  .w-lg-75 {
-    width: 75% !important;
-  }
-}
 @font-face {
   src: url("../fonts/AmaticSC-Regular.ttf");
   font-family: AmaticSC;
@@ -18068,6 +18040,53 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.bg--light {
+  background-color: rgba(255, 255, 255, 0.875);
+}
+
+.fs-32px {
+  font-size: 32px;
+}
+
+.w--50 {
+  width: 50%;
+}
+
+.w-62\.5 {
+  width: 62.5%;
+}
+
+.w-87\.5 {
+  width: 87.5%;
+}
+
+.w--100 {
+  width: 100%;
+}
+
+.w-h-26px {
+  width: 26px;
+  height: 26px;
+}
+
+.place-items-center {
+  place-items: center;
+}
+
+@media (min-width: 1024px) {
+  .w-lg-37\.5 {
+    width: 37.5%;
+  }
+  .w-lg-75 {
+    width: 75% !important;
+  }
+  .w-lg-87\.5 {
+    width: 87.5% !important;
+  }
+  .fs-lg-64px {
+    font-size: 64px;
+  }
+}
 header nav a {
   position: relative;
 }
@@ -18203,6 +18222,26 @@ header nav a.active::after {
   .myModal-inner {
     width: 75vw !important;
   }
+}
+main #hero a[href="#contact"] {
+  border: #ce1212 solid 3px;
+  transition-property: transform, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  font-weight: 600;
+}
+main #hero a[href="#contact"]:hover {
+  background: transparent !important;
+  color: #ce1212 !important;
+  transform: translateY(-0.075rem);
+  box-shadow: 0.1rem 0.1rem #ce1212;
+}
+main #hero a[href="#contact"]:active {
+  transform: translate(0.075em, 0.075em);
+  box-shadow: none;
+}
+main #hero button:hover {
+  color: #ce1212 !important;
 }
 
 /*# sourceMappingURL=app.css.map */

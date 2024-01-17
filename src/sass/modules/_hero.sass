@@ -1,0 +1,21 @@
+main
+    #hero
+        a[href="#contact"]
+            border: $red solid 3px
+            transition-property: transform, box-shadow
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+            transition-duration: 500ms
+            font-weight: 600
+
+            &:hover
+                background: transparent !important
+                color: $red !important
+                transform: translateY(-0.075rem)
+                box-shadow: 0.1rem 0.1rem $red
+
+            &:active
+                transform: translate(0.075em, 0.075em)
+                box-shadow: none
+
+        button:hover
+            color: $red !important

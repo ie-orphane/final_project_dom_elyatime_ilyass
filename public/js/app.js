@@ -12,6 +12,13 @@ const navbar_toggle = () => {
 
 navbarOpen.addEventListener('click', navbar_toggle)
 navbarClose.addEventListener('click', navbar_toggle)
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('nav .active').classList.toggle('active')
+        link.classList.toggle('active')
+    })
+})
 //~ navbar : end 
 
 //^ register modal : start
