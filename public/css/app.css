@@ -8248,6 +8248,10 @@ textarea.form-control-lg {
   top: 0 !important;
 }
 
+.top-12\.5 {
+  top: 12.5% !important;
+}
+
 .top-25 {
   top: 25% !important;
 }
@@ -8262,6 +8266,10 @@ textarea.form-control-lg {
 
 .bottom-0 {
   bottom: 0 !important;
+}
+
+.bottom-12\.5 {
+  bottom: 12.5% !important;
 }
 
 .bottom-25 {
@@ -8280,6 +8288,10 @@ textarea.form-control-lg {
   left: 0 !important;
 }
 
+.start-12\.5 {
+  left: 12.5% !important;
+}
+
 .start-25 {
   left: 25% !important;
 }
@@ -8294,6 +8306,10 @@ textarea.form-control-lg {
 
 .end-0 {
   right: 0 !important;
+}
+
+.end-12\.5 {
+  right: 12.5% !important;
 }
 
 .end-25 {
@@ -18048,8 +18064,8 @@ textarea.form-control-lg {
   font-size: 32px;
 }
 
-.w--50 {
-  width: 50%;
+.fs-48px {
+  font-size: 48px;
 }
 
 .w-62\.5 {
@@ -18058,6 +18074,10 @@ textarea.form-control-lg {
 
 .w-87\.5 {
   width: 87.5%;
+}
+
+.w--50 {
+  width: 50%;
 }
 
 .w--100 {
@@ -18073,9 +18093,19 @@ textarea.form-control-lg {
   place-items: center;
 }
 
+.style-double-check {
+  list-style-image: url("../images/double-check.svg");
+}
+
 @media (min-width: 1024px) {
   .w-lg-37\.5 {
     width: 37.5%;
+  }
+  .w-lg-42 {
+    width: 42%;
+  }
+  .w-lg-58 {
+    width: 58%;
   }
   .w-lg-75 {
     width: 75% !important;
