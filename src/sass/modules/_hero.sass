@@ -39,3 +39,16 @@ main
             &:active
                 transform: translate(0.075em, 0.075em)
                 box-shadow: none
+
+    #stats
+        background-image: url(../images/stats-bg.jpg)
+        background-position: center
+        background-attachment: fixed
+        position: relative
+        &::after
+            content: ""
+            width: 100%
+            height: 100%
+            background: #00000054
+            position: absolute
+            inset: 0

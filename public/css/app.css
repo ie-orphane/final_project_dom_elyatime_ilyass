@@ -18585,5 +18585,19 @@ main #info button:active {
   transform: translate(0.075em, 0.075em);
   box-shadow: none;
 }
+main #stats {
+  background-image: url(../images/stats-bg.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+main #stats::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3294117647);
+  position: absolute;
+  inset: 0;
+}
 
 /*# sourceMappingURL=app.css.map */
