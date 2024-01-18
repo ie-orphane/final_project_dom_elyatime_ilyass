@@ -1,10 +1,13 @@
 @import ../../node_modules/bootstrap/scss/functions
 @import ../../node_modules/bootstrap/scss/variables
 
+$lighter: #dd5a5a
+$light: rgba(255, 255, 255, .875)
 $grey: #eee
 $red: #ce1212
+$lightred: #fae7e7
 
-$custom-colors: ("-red": $red, "-grey": $grey)
+$custom-colors: ("-red": $red, "-grey": $grey, "-lighter": $lighter, "-lightred": $lightred, "-light": $light)
 $theme-colors: map-merge($custom-colors, $theme-colors)
 
 $spacer: .25rem

@@ -19,3 +19,23 @@ main
 
         button:hover
             color: $red !important
+
+    #info
+        button
+            border: $lighter solid 1px
+            color: white
+            transition-property: transform, box-shadow
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+            transition-duration: 500ms
+            font-weight: 600
+            background: $lighter
+
+            &:hover
+                background: $light
+                color: $red
+                transform: translateY(-0.075rem)
+                box-shadow: 0.1rem 0.1rem $lighter
+
+            &:active
+                transform: translate(0.075em, 0.075em)
+                box-shadow: none
