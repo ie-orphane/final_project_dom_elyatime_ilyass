@@ -80,3 +80,30 @@ main
                 left: 50%
                 transform: translateX(-50%)
 
+    #chefs
+        .card
+            transition-property: transform
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+            transition-duration: 500ms
+            overflow: hidden
+            &:hover
+                transform: scale(107.5%)
+                .socials
+                    transform: translateX(calc(-100% - 1rem))
+            .socials
+                transition-property: transform
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+                transition-duration: 500ms
+                position: absolute
+                top: 5%
+                left: 100%
+                padding: 1rem .75rem
+                background-color: transparentize(#fff, .625)
+                display: flex
+                flex-direction: column
+                gap: .75rem
+                border-radius: .375rem
+                a
+                    opacity: 37.5%
+                    &:hover
+                        opacity: 75%

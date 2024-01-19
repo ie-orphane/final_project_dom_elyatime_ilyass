@@ -18389,7 +18389,7 @@ textarea.form-control-lg {
   list-style-image: url("../images/double-check.svg");
 }
 
-.hover\:scale:hover {
+.hover\:scale-112\.5:hover {
   transform: scale(112.5%);
 }
 
@@ -18645,6 +18645,38 @@ main #menu .nav-item::after {
   bottom: -10%;
   left: 50%;
   transform: translateX(-50%);
+}
+main #chefs .card {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  overflow: hidden;
+}
+main #chefs .card:hover {
+  transform: scale(107.5%);
+}
+main #chefs .card:hover .socials {
+  transform: translateX(calc(-100% - 1rem));
+}
+main #chefs .card .socials {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  position: absolute;
+  top: 5%;
+  left: 100%;
+  padding: 1rem 0.75rem;
+  background-color: rgba(255, 255, 255, 0.375);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-radius: 0.375rem;
+}
+main #chefs .card .socials a {
+  opacity: 37.5%;
+}
+main #chefs .card .socials a:hover {
+  opacity: 75%;
 }
 
 .myCarousel {
