@@ -1,0 +1,66 @@
+
+.myCarousel
+    overflow: hidden
+    position: relative
+    padding-bottom: 2rem
+
+    .myCarousel-container
+        display: flex
+        align-items: center
+        gap: 1rem
+        transition: transform 1s ease-in-out
+
+        .myCarousel-item
+            flex: 1 0 calc((100% - calc( 2 * 1rem )) / 3)
+
+            .myCarousel-item-inner
+                display: flex
+                flex-direction: column
+                color: white
+                padding: 20rem 1rem 1.5rem 1rem
+                background-position: center
+                position: relative
+                z-index: -2
+
+                &::after
+                    content: ""
+                    width: 100%
+                    height: 100%
+                    position: absolute
+                    inset: 0
+                    z-index: -1
+                    background-color: rgba(0, 0, 0, 0.625)
+
+                h4:nth-child(2)
+                    position: relative
+                    width: fit-content
+                    padding-bottom: .5rem
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 100%
+                        height: 1.75px
+                        bottom: 0
+                        left: 0
+                        background-color: $red
+                        border-radius: .375rem
+                        
+
+            @for $i from 1 through 3
+                .bg-event-#{$i}
+                    background-image: url('../images/events-' + $i + '.jpg')      
+
+    .myCarousel-navigation
+        position: absolute
+        bottom: 0
+        left: 50%
+        transform: translateX(-50%)
+        display: flex
+        gap: .5rem
+
+        button:not(.active)
+            opacity: 50%
+
+@media ( max-width: 430px )
+    .myCarousel-item
+        flex: 1 0 100% !important

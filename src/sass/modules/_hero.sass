@@ -52,3 +52,31 @@ main
             background: #00000054
             position: absolute
             inset: 0
+
+    #menu
+        .nav-item
+            position: relative
+            cursor: default
+            &:not(.active)
+                cursor: pointer
+                &:hover
+                    color: $red
+                    &::after
+                        opacity: 25%
+
+            &.active
+                color: $red
+                &::after
+                    background-color: $red
+            &::after
+                content: ""
+                position: absolute
+                background-color: rgba(0, 0, 0, .5)
+                opacity: 50%
+                border-radius: .375rem
+                width: 107.5%
+                height: 1px
+                bottom: -10%
+                left: 50%
+                transform: translateX(-50%)
+
