@@ -18381,6 +18381,10 @@ textarea.form-control-lg {
   height: 54px;
 }
 
+.h-fit-content {
+  height: fit-content;
+}
+
 .place-items-center {
   place-items: center;
 }
@@ -18426,6 +18430,22 @@ textarea.form-control-lg {
     font-size: 64px;
   }
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+input, textarea {
+  outline: none;
+}
+
 header nav a {
   position: relative;
 }
@@ -18549,13 +18569,6 @@ header nav a.active::after {
   font-weight: 600;
   cursor: pointer;
 }
-.myModal .myModal-inner .myModal-body input[type=number]::-webkit-inner-spin-button,
-.myModal .myModal-inner .myModal-body input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 0;
-}
 
 @media (max-width: 430px) {
   .myModal-inner {
@@ -18678,22 +18691,48 @@ main #chefs .card .socials a {
 main #chefs .card .socials a:hover {
   opacity: 75%;
 }
+main #booking form input {
+  height: fit-content;
+  flex: calc((100% - 2rem) / 3);
+}
+main #booking form input, main #booking form textarea {
+  border-radius: 0.125rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 0.75rem 1rem;
+}
+main #booking button {
+  border: #ce1212 solid 3px;
+  transition-property: transform, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  font-weight: 600;
+}
+main #booking button:hover {
+  background: transparent !important;
+  color: #ce1212 !important;
+  transform: translateY(-0.075rem);
+  box-shadow: 0.1rem 0.1rem #ce1212;
+}
+main #booking button:active {
+  transform: translate(0.075em, 0.075em);
+  box-shadow: none;
+}
 
-.myCarousel {
+#eventsCarousel {
   overflow: hidden;
   position: relative;
   padding-bottom: 2rem;
 }
-.myCarousel .myCarousel-container {
+#eventsCarousel .myCarousel-container {
   display: flex;
   align-items: center;
   gap: 1rem;
   transition: transform 1s ease-in-out;
 }
-.myCarousel .myCarousel-container .myCarousel-item {
+#eventsCarousel .myCarousel-container .myCarousel-item {
   flex: 1 0 calc((100% - 2rem) / 3);
 }
-.myCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner {
+#eventsCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner {
   display: flex;
   flex-direction: column;
   color: white;
@@ -18702,7 +18741,7 @@ main #chefs .card .socials a:hover {
   position: relative;
   z-index: -2;
 }
-.myCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner::after {
+#eventsCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -18711,12 +18750,12 @@ main #chefs .card .socials a:hover {
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.625);
 }
-.myCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner h4:nth-child(2), .myCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner .h4:nth-child(2) {
+#eventsCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner h4:nth-child(2), #eventsCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner .h4:nth-child(2) {
   position: relative;
   width: fit-content;
   padding-bottom: 0.5rem;
 }
-.myCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner h4:nth-child(2)::after, .myCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner .h4:nth-child(2)::after {
+#eventsCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner h4:nth-child(2)::after, #eventsCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner .h4:nth-child(2)::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -18726,16 +18765,16 @@ main #chefs .card .socials a:hover {
   background-color: #ce1212;
   border-radius: 0.375rem;
 }
-.myCarousel .myCarousel-container .myCarousel-item .bg-event-1 {
+#eventsCarousel .myCarousel-container .myCarousel-item .bg-event-1 {
   background-image: url("../images/events-1.jpg");
 }
-.myCarousel .myCarousel-container .myCarousel-item .bg-event-2 {
+#eventsCarousel .myCarousel-container .myCarousel-item .bg-event-2 {
   background-image: url("../images/events-2.jpg");
 }
-.myCarousel .myCarousel-container .myCarousel-item .bg-event-3 {
+#eventsCarousel .myCarousel-container .myCarousel-item .bg-event-3 {
   background-image: url("../images/events-3.jpg");
 }
-.myCarousel .myCarousel-navigation {
+#eventsCarousel .myCarousel-navigation {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -18743,8 +18782,44 @@ main #chefs .card .socials a:hover {
   display: flex;
   gap: 0.5rem;
 }
-.myCarousel .myCarousel-navigation button:not(.active) {
-  opacity: 50%;
+#eventsCarousel .myCarousel-navigation button:not(.active) {
+  opacity: 25%;
+}
+
+#galleryCarousel {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 2rem;
+}
+#galleryCarousel .myCarousel-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 1s ease-in-out;
+  padding: 2rem 0;
+}
+#galleryCarousel .myCarousel-container .myCarousel-item {
+  flex: 1 0 calc((100% - 6rem) / 5);
+}
+#galleryCarousel .myCarousel-container .myCarousel-item.active {
+  transform: scale(117.5%);
+  border: 2.5px solid #ce1212;
+  padding: 0.1875rem;
+}
+#galleryCarousel .myCarousel-container .myCarousel-item .myCarousel-item-inner img {
+  width: 100%;
+  height: 100%;
+}
+#galleryCarousel .myCarousel-navigation {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+}
+#galleryCarousel .myCarousel-navigation button:not(.active) {
+  opacity: 25%;
 }
 
 @media (max-width: 430px) {
